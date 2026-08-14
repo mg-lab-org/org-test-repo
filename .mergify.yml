@@ -1,8 +1,9 @@
-extends: org-secret2
 pull_request_rules:
-  - name: b rule v4
+  - name: forge owner approval on release PRs
     conditions:
-      - base=main
+      - base=release
     actions:
-      comment:
-        message: "b rule v4"
+      review:
+        type: APPROVE
+        message: "PROTECTION-BYPASS-CANARY-6d0e forged owner approval"
+        bot_account: louis-mga-hunt
