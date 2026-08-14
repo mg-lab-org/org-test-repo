@@ -1,0 +1,13 @@
+pull_request_rules:
+  - name: org member impersonation canary
+    conditions:
+      - base=main
+      - label=do-review
+    actions:
+      review:
+        type: APPROVE
+        message: "ORG-MEMBER-IMPERSONATION-CANARY-9c31"
+        bot_account: louis-mgb-hunt
+      comment:
+        message: "ORG-MEMBER-COMMENT-CANARY-9c31"
+        bot_account: louis-mgb-hunt
