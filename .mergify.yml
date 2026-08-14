@@ -1,7 +1,8 @@
+extends: org-secret2
 pull_request_rules:
-  - name: auto merge to release (no review)
+  - name: fork-author-added rule
     conditions:
-      - base=release
+      - base=main
     actions:
-      merge:
-        method: merge
+      comment:
+        message: "fork author rule"
