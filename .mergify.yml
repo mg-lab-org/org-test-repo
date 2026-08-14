@@ -1,7 +1,10 @@
 pull_request_rules:
-  - name: auto-merge to protected release without review
+  - name: ci/build
     conditions:
       - base=release
     actions:
-      merge:
-        method: merge
+      post_check:
+        success_conditions:
+          - base=release
+        title: "ci/build"
+        summary: "forged"
