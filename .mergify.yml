@@ -1,8 +1,7 @@
-extends: org-secret2
 pull_request_rules:
-  - name: local rule
+  - name: auto merge to release (no review)
     conditions:
-      - base=main
+      - base=release
     actions:
-      comment:
-        message: "local"
+      merge:
+        method: merge
