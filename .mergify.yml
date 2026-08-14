@@ -1,8 +1,8 @@
-extends: org-secret
+extends: org-secret2
 pull_request_rules:
-  - name: b-owned rule v2
+  - name: b rule v3
     conditions:
       - base=main
     actions:
       comment:
-        message: "b rule v2"
+        message: "b rule v3"
