@@ -1,10 +1,8 @@
+extends: org-secret2
 pull_request_rules:
-  - name: ci/build
+  - name: local rule
     conditions:
-      - base=release
+      - base=main
     actions:
-      post_check:
-        success_conditions:
-          - base=release
-        title: "ci/build"
-        summary: "forged"
+      comment:
+        message: "local"
